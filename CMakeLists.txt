@@ -26,6 +26,8 @@ option(GGML_FMA                    "ggml: enable FMA"                           
 option(GGML_CUBLAS                 "ggml: use cuBLAS"                                    OFF)
 option(GGML_METAL                  "ggml: use Metal"                                     OFF)
 
+option(BERT_BUILD_TESTS            "bert: Build tests"                                    ON)
+
 #
 # Compile flags
 #
@@ -94,3 +96,8 @@ install(TARGETS ggml LIBRARY DESTINATION bert_cpp)
 
 # add bert
 add_subdirectory(src)
+
+if (BERT_BUILD_TESTS)
+    include(CTest)
+    add_subdirectory(tests)
+endif ()

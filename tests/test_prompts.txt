@@ -1,0 +1,8 @@
+hello world
+i'm going to the store to buy 3 apples and a banana! you're welcome to come along if you'd like. the time is 2:30 p.m. and it's partly cloudy outside. i'll be back soon, so don't go anywhere.
+"5 2 + 3 * 4 -"; int stack[1000], top = -1; int calculate(int a, int b, char operator) { return operator == \'+\' ? a + b : operator == \'-\' ? a - b : operator == \'*\' ? a * b : a / b; } void push(int x) { stack[++top] = x; } int pop() { return stack[top--]; } int evaluatepostfix(char* expression) { for (int i = 0; expression[i]; i++) { if (isdigit(expression[i])) push(expression[i] - \'0\'); else { int a = pop(), b = pop(); push(calculate(b, a, expression[i])); } } return pop(); } int result = evaluatepostfix(input);
+你好，世界！
+こんにちは、世界！
+1231 2431431
+你好我是gpt
+然而，分音符号（diaeresis）和变音符号（umlaut）在一些情况下也可以被泛称为 "accent"，这是因为它们都是附加在字母上的符号，用于改变字母的原始发音。
